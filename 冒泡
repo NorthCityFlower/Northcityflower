@@ -1,0 +1,30 @@
+package 日常Test;
+
+public class test_1 {
+	public static void main(String[] args) {
+		int[] chengji = {100,95,99,84,26,48,85,6,21,35,48,78,96,25};
+		printArray(chengji);
+		bubbleArray(chengji);
+		System.out.println();
+		printArray(chengji);
+	}
+
+	private static void printArray(int[] chengji) {
+		for(int i = 0 ; i< chengji.length ; i++) {
+			System.out.print(chengji[i]+ " ");
+		}
+	}
+	
+	public static void bubbleArray(int chengji[]) {
+		for(int i = 0; i<chengji.length-1 ;i++) {
+			for(int j = 0;j<chengji.length - i -1 ;j++) {
+				if(chengji[j]>chengji[j+1]) {
+					int temp = chengji[j];
+					chengji[j] = chengji[j+1];
+					chengji[j+1] = temp ;
+				}
+			}
+		}
+	}
+}
+
